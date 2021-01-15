@@ -31,8 +31,8 @@
     </style>
   </head>
   <body>
-    <header class='header bg-dark'>
-      <div class = 'container'>
+    <header class='header fixed-top bg-dark'>
+      <div class = 'container '>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark center">
         <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "img/logo.png" %}"> <h2 class="h1"></h2></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +41,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto ">
             <li class="nav-item active">
+                <a class="nav-link " href="{% url 'home' %}">Home </a>
+            </li> 
+            <li class="nav-item">
                 <a class="nav-link " href="https://www.linkedin.com/in/aviprajapati  ">LinkedIn </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="https://github.com/avinashz14">Github</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% static 'img/Resume.pdf' %}">Resume</a>
@@ -56,51 +62,10 @@
    </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4 text-dark">AVINASH</h1>
-        <hr>
-        <p class="lead">A CSE undergraduate believe in Optimistic view to see the world rathar than pessimistic.
-        </br> Cricket lover and  enthusiast for new stuffs.
-        </br> Code Can't lie but Man can. </p>
-        <cite>"When something is important enough, you do it even if the odds are not in your favor." </br> -Alon Mask</cite>
-        <hr class="my-4">
-        <p class="lead">
-            <a href="mailto:prajapati143a@gmail.com" class="btn btn-primary btn-lg" role="button">Contact Us</a>
-        </p>
-        <img src = "{% static "img\logo.png" %}">
-        </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-dark">
-    <div class="container">
-   
-         <div class="row">
-         {% for pro in profile %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ pro.image.url }}" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">{{ pro.title }}</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-    {% endfor %}
-    </div>
-  </div>
+{% block page_content %} {% endblock %}
 </main>
 
-<footer class="text-muted">
+<footer class="text-muted fixed-bottom">
   <div class="container">
     
     <p class='text-center'> Portfolio for avinash by  @nithost &copy;   {% now 'Y'%} </p>

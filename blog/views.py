@@ -1,16 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 # Create your views here.
 
-def Blog(request, slug):
-    q = Post.objects.filter(slug__iexact = slug) 
-    if q.exists():
-        q = q.first() 
-    else: 
-        return HttpResponse('<h1>Post Not Found</h1>') 
-    context = { 
+def Blog(request):
+    post  = Post.objects.all
+    return render(request, 'blog.html', {'post': post }) 
 
-        'post': q 
-    } 
-    return render(request, 'blog.html', context) 
+
+class PostListView(ListView):
+    model = Post
