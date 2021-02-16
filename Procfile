@@ -1,1 +1,1 @@
-web: gunicorn DiseasePredictor.wsgi
+web: gunicorn PORTFOLIO.wsgi --log-file -
