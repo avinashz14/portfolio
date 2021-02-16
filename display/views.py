@@ -5,4 +5,4 @@ from .models import Profile
 
 def home(request):
     profile = Profile.objects.all
-    return render(request, 'home.html', {'profile' : profile})
+    return render(request, 'templates/home.html', {'profile' : profile})
