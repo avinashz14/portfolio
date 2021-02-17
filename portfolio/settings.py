@@ -25,9 +25,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '0apwu^*axv7o&vft%tx7g&bs(dxfxa5+eyc02aw8p!&908t!4u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','avinash-portfolio.herokuapp.com', 'portfolio-avinash.herokuapp.com']
+
 
 
 # Application definition
