@@ -34,12 +34,12 @@ ALLOWED_HOSTS = ['127.0.0.1','avinash-portfolio.herokuapp.com', 'portfolio-avina
 # 'whitenoise.runserver_nostatic',
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'display',
     'blog',
