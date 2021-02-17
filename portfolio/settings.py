@@ -31,9 +31,9 @@ ALLOWED_HOSTS = ['127.0.0.1','avinash-portfolio.herokuapp.com', 'portfolio-avina
 
 
 # Application definition
+# 'whitenoise.runserver_nostatic',
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -131,11 +131,8 @@ STATICFILES_DIR =[
     os.path.join(BASE_DIR, '../static')
 ]
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
+#WhiteNoise 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 
 #media files 
