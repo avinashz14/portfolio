@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'display',
     'blog',
     'projects'
@@ -137,6 +138,13 @@ STATICFILES_DIR =[
 #WhiteNoise 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+#Emai_backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
 
 #media files 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
