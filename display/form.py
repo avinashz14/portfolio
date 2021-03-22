@@ -5,6 +5,8 @@ from django import forms
 # our new form
 
 class ContactForm(forms.Form):
+    error_css_class = 'error'
+    required_css_class = 'required'
     name = forms.CharField(required=True, max_length=30)
     email = forms.EmailField(required=True,max_length=50)
     subject = forms.CharField(required=True,max_length=100)

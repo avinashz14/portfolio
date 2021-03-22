@@ -5,6 +5,7 @@ from .form import ContactForm
 from .models import Profile
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
+from django.contrib import messages
 
 def home(request):
 
@@ -23,8 +24,9 @@ def home(request):
                 send_mail(subject, message, body['email'], ['prajapati143a@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
+            messages.success(request,"Success....Your message has been sent to Avinash!!")
             return redirect('home')
-
+        messages.error(request, "message not sent.")
  
     else:
         form  = ContactForm()
