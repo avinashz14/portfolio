@@ -153,15 +153,15 @@ STATICFILES_DIR =[
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #Emai_backend
-'''
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
-'''
 
+'''
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 SENDGRID_API_KEY= config('SENDGRID_API_KEY')
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
@@ -170,7 +170,7 @@ EMAIL_HOST_USER = 'apikey' # Exactly that.
 EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587 # 25 or 587 (for unencrypted/TLS connections).
 EMAIL_USE_TLS = True
-
+'''
 #media files 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
