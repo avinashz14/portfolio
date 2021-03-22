@@ -42,7 +42,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','avinash-portfolio.herokuapp.com', 'portfolio-avinash.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -165,7 +165,11 @@ EMAIL_PORT = 1025
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 SENDGRID_API_KEY= config('SENDGRID_API_KEY')
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
-
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # Exactly that. 
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = 587 # 25 or 587 (for unencrypted/TLS connections).
+EMAIL_USE_TLS = True
 
 #media files 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
