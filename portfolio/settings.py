@@ -25,6 +25,7 @@ import whitenoise
 
 from decouple import config
 
+
 from pathlib import Path
 from django.conf import settings
 
@@ -160,13 +161,10 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 '''
-SENDGRID_API_KEY = config("SENDGRID_API_KEY")
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'your sendgrid user name'
-EMAIL_HOST_PASSWORD = 'your sendgrid password'
-EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = 'your sendgrid email'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+SENDGRID_API_KEY= config('SENDGRID_API_KEY')
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
 
 #media files 
