@@ -9,7 +9,7 @@ from django.db.models.signals import post_save
 
 class Post(models.Model):
     title = models.CharField(max_length=250, db_index=True)
-    slug = models.SlugField(max_length=250, db_index=True)
+    slug = models.SlugField(blank = True)
     body = models.TextField()
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

@@ -6,3 +6,5 @@ class Profile(models.Model):
     image = models.ImageField(upload_to='image/')
     title = models.CharField(max_length=200, default = 'New Title')
     
+    def __str__(self):
+        return self.title

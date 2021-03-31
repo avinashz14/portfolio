@@ -1,23 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
-<!--
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title >Blog </title>
 
-    <!-- CSS only --> 
-   <!--
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% block title %}Blog-MeetMe Personal {% endblock %}
 
-   </head>
-<body >
--->
-    {% block title %}<title >Blog -MeetMe-Personal </title>{% endblock %}
     {% block page_content %}
     <div class= "container-fluid bg-light " >
       <h1> Happy  to see you </h1> 
@@ -31,10 +16,3 @@
          </div> 
     </div>
     {% endblock %}
-<!--
-
-</body>
-
-</html>
-
--->
