@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}<title >Projects -MeetMe-Personal </title>{% endblock %}
+{% block title %}Work Details - {{ project.title }}{% endblock %}
 
 {% block page_content %}
-   <h1> milo kabhi btate hai </h1>
+   <h1>{{project.title}}</h1>
+  <div> 
+      <img src = "{% media 'pro_img/wallpaper1.png' %}"/>
+  </div>
+   <p>{{project.description}}</p>
+   <span><a herf="{{project.url}}">github link</a></span>
 {% endblock %}
