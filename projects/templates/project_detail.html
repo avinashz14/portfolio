@@ -5,9 +5,25 @@
 
 {% block page_content %}
    <h1>{{project.title}}</h1>
-  <div> 
-      <img src = "{% media 'pro_img/wallpaper1.png' %}"/>
-  </div>
-   <p>{{project.description}}</p>
-   <span><a herf="{{project.url}}">github link</a></span>
+  
+  <div class="colorlib-about"> 
+  	<div class="overlay">
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+					   				<div class="slider-text-inner js-fullheight">
+                                        <h1 class="text-info">My name is what know</h1>
+                                        <div class="project" style="background-image: url({{ project.image.url }});">
+                                        </div>
+                                        
+                                        <p>{{project.description}}</p>
+                                        <span><a herf="{{ project.url.url }}">github link</a></span>
+                                        </div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+ 
+</div>
+  
 {% endblock %}
